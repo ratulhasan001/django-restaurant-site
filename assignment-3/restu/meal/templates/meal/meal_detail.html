@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}{{ item.strCategory }}{% endblock %}
+{% block content %}
+<div class="container py-4" style="max-width: 760px">
+  <a href="{% url 'meal' %}" class="small">&larr; Back to the menu</a>
+  <div class="text-center my-3">
+    <img src="{{ item.strCategoryThumb }}" alt="{{ item.strCategory }}" class="img-fluid" style="max-height: 240px" />
+  </div>
+  <h1 class="h2">{{ item.strCategory }}</h1>
+  <p>{{ item.strCategoryDescription|linebreaksbr }}</p>
+</div>
+{% endblock %}
