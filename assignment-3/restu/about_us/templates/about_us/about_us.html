@@ -1,19 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}About Us{% endblock %}
+{% block extra_head %}<link rel="stylesheet" href="{% static 'css/style.css' %}" />{% endblock %}
 {% block content %}
-<link rel = "stylesheet" href="{%  static 'css/style.css' %}" />
-<div class="about row container-fluid">
-    <div class="pic col-6">
-        <img src="{% static 'images/aboutus.jpg' %}" alt="sss">
+<div class="about">
+  <div class="container py-5">
+    <div class="row align-items-center g-4">
+      <div class="pic col-md-6 text-center">
+        <img src="{% static 'images/aboutus.jpg' %}" alt="The King's Restora team" class="img-fluid rounded" />
+      </div>
+      <div class="writing col-md-6">
+        <h1>Welcome to King's Restora, where food and community connect.</h1>
+        <p class="lead">At King's Restora, we're more than just a place to eat.</p>
+        <a href="{% url 'meal' %}" class="btn btn-outline-light btn-lg mt-3">Explore our menu</a>
+      </div>
     </div>
-    <div class="writing col-6 ">
-        <div class="lekha">
-            <h1>
-                Welcome to King's Restora, Where Food and Community Connect At
-                King's Restora, we're more than just a place to eat.
-            </h1>
-        </div>
-        <button style="margin-top: 30px;" type="button" class="btn btn-outline-dark btn-lg">Read More!!</button>
-    </div>
+  </div>
 </div>
 {% endblock %}
